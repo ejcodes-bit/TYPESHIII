@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07111f" />
+  <title>FootballPulse | Live Top 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-one"></div><div class="bg-orb orb-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-ball">⚽</span><span>Football<span class="accent">Pulse</span></span></a>
+    <div class="live-chip"><span class="live-dot"></span> LIVE DATA</div>
+    <button id="refreshBtn" class="refresh-btn" title="Refresh now">↻ <span>Refresh</span></button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">THE BIG FIVE • LIVE FOOTBALL HUB</p>
+        <h1>Every match.<br><span>One scoreboard.</span></h1>
+        <p class="hero-copy">Live scores, match status and league tables from the Premier League, LaLiga, Bundesliga, Serie A and Ligue 1.</p>
+        <div class="updated">Last update: <strong id="lastUpdated">loading…</strong> <span class="tiny-live">●</span></div>
+      </div>
+      <div class="hero-ball">⚽</div>
+    </section>
+
+    <nav class="league-tabs" id="leagueTabs" aria-label="Leagues"></nav>
+
+    <section class="dashboard-grid">
+      <div class="main-column">
+        <div class="section-heading"><div><p class="eyebrow">MATCH CENTRE</p><h2 id="matchTitle">Today's matches</h2></div><span id="matchCount" class="muted">Loading…</span></div>
+        <div id="matches" class="matches"></div>
+
+        <div class="section-heading table-heading"><div><p class="eyebrow">TABLE</p><h2 id="tableTitle">Standings</h2></div></div>
+        <div class="table-wrap">
+          <table><thead><tr><th>#</th><th>Team</th><th>GP</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>PTS</th></tr></thead><tbody id="standings"></tbody></table>
+        </div>
+      </div>
+
+      <aside class="assistant-card">
+        <div class="assistant-head"><div class="ai-avatar">✦</div><div><p class="eyebrow">LIVE AI ASSISTANT</p><h2>MatchMind</h2></div><span class="online"><i></i> online</span></div>
+        <p class="assistant-intro">Ask me about the live scoreboard or current table. I answer using the latest data loaded on this page.</p>
+        <div class="quick-prompts">
+          <button data-q="What matches are live?">What's live?</button>
+          <button data-q="Who is top of the table?">Top of the table?</button>
+          <button data-q="What matches are today?">Today's games</button>
+        </div>
+        <div id="chat" class="chat" aria-live="polite"><div class="msg bot">Hey! I'm MatchMind ⚡ Ask me about <b>live matches</b>, <b>standings</b> or <b>today's games</b>.</div></div>
+        <form id="chatForm" class="chat-form"><input id="chatInput" autocomplete="off" placeholder="Ask MatchMind…"/><button aria-label="Send">➤</button></form>
+        <p class="assistant-note">Data refreshes automatically every 30 seconds.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer><span>FootballPulse</span> • Built for football fans • Live data via ESPN's public sports API</footer>
+  <script src="app.js"></script>
+</body>
+</html>
