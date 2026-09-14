@@ -1,63 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07111f" />
-  <title>FootballPulse | Live Top 5</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>FootyPulse | Live Football</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,Arial,sans-serif;background:#06100c;color:#f5f7f6;min-height:100vh}button,input{font:inherit}button{cursor:pointer}.topbar{height:76px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:#091710;border-bottom:1px solid #1c3026}.brand{color:white;text-decoration:none;font-size:23px;font-weight:800}.brand span{color:#28d982}.live-chip{color:#39df8b;font-size:11px;font-weight:700}.live-dot{display:inline-block;width:7px;height:7px;background:#39df8b;border-radius:50%;margin-right:6px}.refresh-btn{background:#11231a;border:1px solid #294438;color:white;padding:10px 16px;border-radius:10px}.container{width:88%;max-width:1450px;margin:auto}.hero{margin-top:30px;padding:45px;border-radius:25px;background:radial-gradient(circle at 85% 50%,#123c28,transparent 35%),linear-gradient(135deg,#0c2016,#08130e);border:1px solid #1c392a;display:flex;justify-content:space-between;align-items:center}.eyebrow{color:#35d988;font-size:10px;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(38px,5vw,68px);line-height:1.02;margin-top:14px}.hero h1 span{color:#35d988}.hero-copy{max-width:700px;color:#91a69a;margin-top:17px;line-height:1.6}.hero-ball{font-size:110px}.updated{margin-top:20px;color:#71877c;font-size:12px}.tiny-live{color:#35d988}.league-tabs{display:flex;gap:9px;overflow-x:auto;padding:24px 0 10px}.league-tabs button{white-space:nowrap;background:#0c1b14;border:1px solid #233b2e;color:#91a59b;padding:11px 15px;border-radius:10px}.league-tabs button.active{background:#20c979;border-color:#20c979;color:#031009;font-weight:800}.dashboard-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:22px}.main-column,.assistant-card{background:#091610;border:1px solid #1b3025;border-radius:20px;padding:24px}.section-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.section-heading h2{font-size:23px;margin-top:5px}.muted{font-size:11px;color:#6e8278}.matches{display:grid;gap:10px}.match{background:#0d1c15;border:1px solid #1b3025;border-radius:14px;padding:16px;display:grid;grid-template-columns:120px 1fr 90px;align-items:center;gap:15px}.time{font-size:11px;color:#7d9187;line-height:1.5}.status{display:block;width:max-content;margin-top:6px;padding:3px 7px;border-radius:7px;background:#1b2b23;color:#9aacA1;font-size:9px}.status.live{background:#123f2b;color:#39e28b}.team{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0}.team-name{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700}.score{font-weight:800;font-size:19px}.crest{width:28px;height:28px;object-fit:contain}.match-meta{text-align:right;color:#52675c;font-size:10px}.empty{padding:30px;text-align:center;color:#71857a}.table-heading{margin-top:30px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:700px;font-size:12px}th{text-align:left;color:#687d72;font-size:9px;padding:9px 7px;border-bottom:1px solid #20352a}td{padding:11px 7px;border-bottom:1px solid #16271f}.club{display:flex;align-items:center;gap:8px;font-weight:600}.pts{font-weight:800}.assistant-card{height:max-content}.assistant-head{display:flex;align-items:center;gap:12px}.ai-avatar{width:45px;height:45px;border-radius:13px;background:#153d2a;display:grid;place-items:center;color:#38dc8b;font-size:24px}.assistant-head h2{margin-top:3px}.online{margin-left:auto;font-size:10px;color:#5f7569}.online i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#32dc88;margin-right:4px}.assistant-intro{color:#7e9388;font-size:12px;line-height:1.6;margin:17px 0}.quick-prompts{display:flex;gap:7px;flex-wrap:wrap}.quick-prompts button{background:#102019;border:1px solid #294438;color:#9aacA1;padding:7px 9px;border-radius:8px;font-size:11px}.chat{height:220px;overflow-y:auto;padding:16px 0}.msg{max-width:88%;padding:11px 13px;border-radius:11px;margin-bottom:9px;font-size:12px;line-height:1.5}.msg.bot{background:#122119;border:1px solid #20372a}.msg.user{margin-left:auto;background:#179b60;color:white}.chat-form{display:flex;gap:8px}.chat-form input{flex:1;min-width:0;background:#07120d;border:1px solid #294438;border-radius:10px;padding:11px;color:white;outline:none}.chat-form input:focus{border-color:#32d987}.chat-form button{border:0;background:#20c979;color:#031009;font-weight:800;border-radius:10px;width:46px}.assistant-note{font-size:9px;color:#53695d;margin-top:10px}footer{width:88%;max-width:1450px;margin:28px auto;padding:22px 0;border-top:1px solid #1b2d24;color:#5e7468;font-size:10px;display:flex;justify-content:space-between}@media(max-width:850px){.dashboard-grid{grid-template-columns:1fr}.hero-ball{display:none}.match{grid-template-columns:85px 1fr 55px}.team-name{font-size:11px}.match-meta{display:none}}@media(max-width:550px){.container{width:94%}.hero{padding:28px}.hero h1{font-size:38px}.main-column,.assistant-card{padding:17px}.topbar{padding:0 4%}.brand{font-size:19px}}
+</style>
 </head>
 <body>
-  <div class="bg-orb orb-one"></div><div class="bg-orb orb-two"></div>
-  <header class="topbar">
-    <a class="brand" href="#"><span class="brand-ball">⚽</span><span>Football<span class="accent">Pulse</span></span></a>
-    <div class="live-chip"><span class="live-dot"></span> LIVE DATA</div>
-    <button id="refreshBtn" class="refresh-btn" title="Refresh now">↻ <span>Refresh</span></button>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">THE BIG FIVE • LIVE FOOTBALL HUB</p>
-        <h1>Every match.<br><span>One scoreboard.</span></h1>
-        <p class="hero-copy">Live scores, match status and league tables from the Premier League, LaLiga, Bundesliga, Serie A and Ligue 1.</p>
-        <div class="updated">Last update: <strong id="lastUpdated">loading…</strong> <span class="tiny-live">●</span></div>
-      </div>
-      <div class="hero-ball">⚽</div>
-    </section>
-
-    <nav class="league-tabs" id="leagueTabs" aria-label="Leagues"></nav>
-
-    <section class="dashboard-grid">
-      <div class="main-column">
-        <div class="section-heading"><div><p class="eyebrow">MATCH CENTRE</p><h2 id="matchTitle">Today's matches</h2></div><span id="matchCount" class="muted">Loading…</span></div>
-        <div id="matches" class="matches"></div>
-
-        <div class="section-heading table-heading"><div><p class="eyebrow">TABLE</p><h2 id="tableTitle">Standings</h2></div></div>
-        <div class="table-wrap">
-          <table><thead><tr><th>#</th><th>Team</th><th>GP</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>PTS</th></tr></thead><tbody id="standings"></tbody></table>
-        </div>
-      </div>
-
-      <aside class="assistant-card">
-        <div class="assistant-head"><div class="ai-avatar">✦</div><div><p class="eyebrow">LIVE AI ASSISTANT</p><h2>MatchMind</h2></div><span class="online"><i></i> online</span></div>
-        <p class="assistant-intro">Ask me about the live scoreboard or current table. I answer using the latest data loaded on this page.</p>
-        <div class="quick-prompts">
-          <button data-q="What matches are live?">What's live?</button>
-          <button data-q="Who is top of the table?">Top of the table?</button>
-          <button data-q="What matches are today?">Today's games</button>
-        </div>
-        <div id="chat" class="chat" aria-live="polite"><div class="msg bot">Hey! I'm MatchMind ⚡ Ask me about <b>live matches</b>, <b>standings</b> or <b>today's games</b>.</div></div>
-        <form id="chatForm" class="chat-form"><input id="chatInput" autocomplete="off" placeholder="Ask MatchMind…"/><button aria-label="Send">➤</button></form>
-        <p class="assistant-note">Data refreshes automatically every 30 seconds.</p>
-      </aside>
-    </section>
-  </main>
-
-  <footer><span>FootballPulse</span> • Built for football fans • Live data via ESPN's public sports API</footer>
-  <script src="app.js"></script>
-</body>
-</html>
+<header class="topbar"><a class="brand" href="#">⚽ Footy<span>Pulse</span></a><div class="live-chip"><span class="live-dot"></span>LIVE DATA</div><button id="refreshBtn" class="refresh-btn">↻ Refresh</button></header>
+<main class="container">
+<section class="hero"><div><p class="eyebrow">THE BIG FIVE + UCL • LIVE FOOTBALL HUB</p><h1>Every match.<br><span>One scoreboard.</span></h1><p class="hero-copy">Live scores, fixtures and detailed league tables from Europe's biggest competitions.</p><div class="updated">Last update: <strong id="lastUpdated">loading…</strong> <span class="tiny-live">●</span></div></div><div class="hero-ball">⚽</div></section>
+<nav class="league-tabs" id="leagueTabs"></nav>
+<section class="dashboard-grid"><div class="main-column"><div class="section-heading"><div><p class="eyebrow">MATCH CENTRE</p><h2 id="matchTitle">Matches</h2></div><span id="matchCount" class="muted">Loading…</span></div><div id="matches" class="matches"></div><div class="section-heading table-heading"><div><p class="eyebrow">TABLE</p><h2 id="tableTitle">Standings</h2></div></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr></thead><tbody id="standings"></tbody></table></div></div>
+<aside class="assistant-card"><div class="assistant-head"><div class="ai-avatar">✦</div><div><p class="eyebrow">FOOTBALL AI</p><h2>MatchMind</h2></div><span class="online"><i></i>online</span></div><p class="assistant-intro">Ask me about live matches, today's games or the current table. I use the football data loaded on this page.</p><div class="quick-prompts"><button data-q="What matches are live?">What's live?</button><button data-q="Who is top of the table?">Top of table?</button><button data-q="What matches are today?">Today's games</button></div><div id="chat" class="chat"><div class="msg bot">Hey! I'm MatchMind ⚡ Ask me about <b>live matches</b>, <b>standings</b> or <b>today's games</b>.</div></div><form id="chatForm" class="chat-form"><input id="chatInput" autocomplete="off" placeholder="Ask MatchMind…"><button>➤</button></form><p class="assistant-note">Data refreshes automatically every 30 seconds.</p></aside></section></main>
+<footer><span>FootyPulse © 2026</span><span>Live football data via ESPN's public sports API</span></footer>
+<script>
+const LEAGUES={EPL:{name:'Premier League',code:'eng.1'},LaLiga:{name:'LaLiga',code:'esp.1'},Bundesliga:{name:'Bundesliga',code:'ger.1'},SerieA:{name:'Serie A',code:'ita.1'},Ligue1:{name:'Ligue 1',code:'fra.1'},UCL:{name:'UEFA Champions League',code:'uefa.champions'}};let active='EPL',data={};const $=s=>document.querySelector(s);const esc=x=>String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));function tabs(){$('#leagueTabs').innerHTML=Object.entries(LEAGUES).map(([k,v])=>`<button class="${k===active?'active':''}" data-league="${k}">${k==='UCL'?'🏆 ':''}${v.name}</button>`).join('');document.querySelectorAll('#leagueTabs button').forEach(b=>b.onclick=()=>{active=b.dataset.league;tabs();render()})}function crest(t){return t?.logo?`<img class="crest" src="${esc(t.logo)}" alt="">`:''}function status(g){if(g.status?.type?.state==='in')return `<span class="status live">● LIVE ${esc(g.status.displayClock||'')}</span>`;if(g.status?.type?.completed)return '<span class="status">FT</span>';return `<span class="status">${esc(g.status?.type?.shortDetail||'Scheduled')}</span>`}async function fetchLeague(k){let c=LEAGUES[k].code;let [a,b]=await Promise.all([fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${c}/scoreboard?limit=50`).then(r=>r.json()),fetch(`https://site.api.espn.com/apis/v2/sports/soccer/${c}/standings`).then(r=>r.json()).catch(()=>({}))]);return{events:a.events||[],standings:b?.children?.[0]?.standings?.entries||b?.standings?.entries||[]}}async function load(){try{let ks=Object.keys(LEAGUES);let vals=await Promise.all(ks.map(fetchLeague));data=Object.fromEntries(ks.map((k,i)=>[k,vals[i]]));render();$('#lastUpdated').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'})}catch(e){console.error(e);$('#matches').innerHTML='<div class="empty">Could not load live data. Try refreshing.</div>'}}function stat(x,n){let s=x.stats||[];return s.find(a=>a.name===n)?.value??0}function render(){let d=data[active]||{events:[],standings:[]};$('#matchTitle').textContent=`${LEAGUES[active].name} · Matches`;$(`#tableTitle`).textContent=`${LEAGUES[active].name} · Standings`;$('#matchCount').textContent=`${d.events.length} match${d.events.length===1?'':'es'}`;$('#matches').innerHTML=d.events.length?d.events.map(g=>{let ts=g.competitions?.[0]?.competitors||[],h=ts.find(t=>t.homeAway==='home')||ts[0]||{},a=ts.find(t=>t.homeAway==='away')||ts[1]||{},dt=new Date(g.date);return `<article class="match"><div class="time">${dt.toLocaleDateString([],{weekday:'short',day:'numeric',month:'short'})}<br>${dt.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}${status(g)}</div><div><div class="team"><span class="team-name">${crest(h.team)}${esc(h.team?.displayName||'Home')}</span><span class="score">${h.score??'–'}</span></div><div class="team"><span class="team-name">${crest(a.team)}${esc(a.team?.displayName||'Away')}</span><span class="score">${a.score??'–'}</span></div></div><div class="match-meta">${esc(g.season?.slug||'')}</div></article>`}).join(''):'<div class="empty">No matches listed.</div>';$('#standings').innerHTML=d.standings.length?d.standings.map((x,i)=>{let t=x.team||{};return `<tr><td>${i+1}</td><td><span class="club">${crest(t)}${esc(t.displayName||t.name||'Team')}</span></td><td>${stat(x,'gamesPlayed')}</td><td>${stat(x,'wins')}</td><td>${stat(x,'ties')}</td><td>${stat(x,'losses')}</td><td>${stat(x,'pointsFor')}</td><td>${stat(x,'pointsAgainst')}</td><td>${stat(x,'pointDifferential')}</td><td class="pts">${stat(x,'points')}</td></tr>`}).join(''):'<tr><td colspan="10" style="text-align:center;padding:25px;color:#718198">Standings unavailable</td></tr>'}function reply(q){let d=data[active]||{events:[],standings:[]},s=q.toLowerCase(),live=d.events.filter(e=>e.status?.type?.state==='in');if(s.includes('live'))return live.length?`🔴 ${live.length} live match${live.length>1?'es':''}: ${live.map(e=>e.name).join(', ')}`:`🔵 No ${LEAGUES[active].name} matches are live right now.`;if(s.includes('top')||s.includes('table')||s.includes('first'))return d.standings[0]?.team?.displayName?`🏆 ${d.standings[0].team.displayName} are top of the ${LEAGUES[active].name} table with ${stat(d.standings[0],'points')} points.`:`I can't see the table data right now.`;if(s.includes('today')||s.includes('match')||s.includes('game'))return d.events.length?`📅 There are ${d.events.length} listed ${LEAGUES[active].name} matches.`:`There are no listed matches.`;return`I can help with live matches, today's games and the ${LEAGUES[active].name} table.`}function msg(t,w){let e=document.createElement('div');e.className='msg '+w;e.textContent=t;$('#chat').appendChild(e);$('#chat').scrollTop=99999}$('#chatForm').onsubmit=e=>{e.preventDefault();let i=$('#chatInput'),q=i.value.trim();if(!q)return;msg(q,'user');i.value='';setTimeout(()=>msg(reply(q),'bot'),200)};document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{msg(b.dataset.q,'user');setTimeout(()=>msg(reply(b.dataset.q),'bot'),200)});$('#refreshBtn').onclick=load;tabs();load();setInterval(load,30000);
+</script>
+</body></html>
